@@ -1,4 +1,4 @@
-# Activity 4: ERC-20 Tokens.
+# Activity 6: ERC-20 Tokens.
 
 ## Solidity/Ethereum basics
 

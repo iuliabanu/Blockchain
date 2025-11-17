@@ -50,4 +50,10 @@ describe("Token contract", function () {
             token.connect(owner).transfer(addr1.address, 1001)
         ).to.be.revertedWith("Insufficient funds!");
     });
+
+    it("Should emit Transfer event on transfer", async function() {
+        await expect(token.connect(owner).transfer(addr1.address, 100n))
+            .to.emit(token, "Transfer")
+            .withArgs(owner.address, addr1.address, 100n);
+    });
 });
